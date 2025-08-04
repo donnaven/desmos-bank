@@ -2,9 +2,99 @@
 <html>
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Desmos Bank</title>
+
+    <style>
+    :root {
+      --bg-color: #f9f9fa;
+      --primary-color: #4a90e2;
+      --text-color: #333;
+      --card-bg: #ffffff;
+      --border-radius: 8px;
+      --spacing: 16px;
+      --shadow: rgba(0, 0, 0, 0.05);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      padding: var(--spacing);
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    header {
+      margin-bottom: calc(var(--spacing) * 2);
+    }
+    header h1 {
+      font-size: 9rem;
+      color: var(--primary-color);
+      margin-bottom: 0.5rem;
+    }
+    header p {
+      font-size: 1.5rem;
+      color: var(--text-color);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .section-title {
+        font-size: 1.5rem;
+      color: #1e497e;
+      margin-bottom: calc(var(--spacing) * 1);
+    }
+    .index-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--spacing);
+      margin-top: calc(var(--spacing) * 1.5);
+    }
+    .index-list li {
+      background-color: var(--card-bg);
+      padding: var(--spacing);
+      border-radius: var(--border-radius);
+      box-shadow: 0 2px 4px var(--shadow);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .index-list li:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 8px var(--shadow);
+    }
+    .index-list a {
+      text-decoration: none;
+      color: var(--primary-color);
+      font-size: 1.75rem;
+      font-weight: 500;
+    }
+    .index-list a:hover {
+      text-decoration: underline;
+    }
+    @media (min-width: 600px) {
+      .index-list {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      }
+    }
+  </style>
 </head>
+
 <body>
-    
+    <div class="container">
+    <header>
+      <h1>Desmos Bank</h1>
+      <p>A free, open source database of Desmos Calculator solutions to SAT math problems.</p>
+    </header>
+    <h2 class="section-title">Practice Tests</h2>
+    <ul class="index-list">
+      <li><a href="pt4.html">Practice Test 4</a></li>
+      <li><a href="#pt5">Practice Test 5</a></li>
+      <li><a href="#pt6">Practice Test 6</a></li>
+      <!-- Add more practice tests as needed -->
+    </ul>
+  </div>
 </body>
+
 </html>
